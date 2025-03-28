@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcelo Agáchate y Conócelo</title>
+    <link rel="icon" type="image/jpeg" href="img/marcelo.jpg">
+    <style>
+        @font-face {
+            font-family: 'Gilbert';
+            src: url('https://typewithpride.com/gilbert-color.otf');
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Gilbert', Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(45deg, #FF0018, #FFA52C, #FFFF41, #008018, #0000F9, #86007D);
+            color: white;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            backdrop-filter: blur(10px);
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        header {
+            text-align: center;
+            padding: 50px 0;
+            animation: fadeIn 2s;
+        }
+
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 5px solid white;
+            margin: 20px auto;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+        }
+
+        .section {
+            padding: 40px 20px;
+            margin: 30px 0;
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .skill-card {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: scale(1.05);
+        }
+
+        .rights-section {
+            background: rgba(255, 0, 24, 0.3);
+            padding: 30px;
+            margin: 40px 0;
+            border-left: 5px solid #FF0018;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .profile-img {
+                width: 150px;
+                height: 150px;
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        h1, h2 {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-bottom: 20px;
+        }
+
+        .pride-flag {
+            height: 10px;
+            background: linear-gradient(90deg, 
+                #FF0018 16.6%,
+                #FFA52C 16.6%, 33.2%,
+                #FFFF41 33.2%, 49.8%,
+                #008018 49.8%, 66.4%,
+                #0000F9 66.4%, 83%,
+                #86007D 83%);
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="img/marcelo.jpg" 
+                 alt="Marcelo" 
+                 class="profile-img">
+            <h1>Marcelo Agáchate y Conócelo</h1>
+            <div class="pride-flag"></div>
+            <p>Estudiante de Turismo | Activista LGBT+</p>
+        </header>
+
+        <section class="section">
+            <h2>¡Hola! 👋</h2>
+            <p>Soy estudiante de turismo en mi cuarto año, residente de Santa Cruz de la Sierra en el barrio donde el diablo perdió su poncho 🏡. Apasionado por los derechos humanos y la diversidad.</p>
+        </section>
+
+        <section class="section">
+            <h2>Mis Capacitaciones 🎓</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Carabinero Lomo Azul 👮♂️</h3>
+                    <p>Especialista en seguridad turística</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Ropavejero de Primera 👔</h3>
+                    <p>Expertos en textiles y tradiciones</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Artista Callejero 🎭</h3>
+                    <p>Performance y expresión cultural</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Gigolo Profesional 💃</h3>
+                    <p>Arte de la compañía y entretenimiento</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="rights-section">
+            <h2>🏳️‍🌈 Mis Derechos 🏳️‍⚧️</h2>
+            <p>Como persona LGBT+ tengo derecho a:</p>
+            <ul>
+                <li>Igualdad ante la ley</li>
+                <li>Libre expresión de mi identidad</li>
+                <li>Protección contra la discriminación</li>
+                <li>Amor libre y autodeterminación</li>
+                <li>Participación social plena</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Idiomas 🌐</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Español 🇪🇸</h3>
+                    <p>Nativo - Dominio completo</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Webadad 🏔️</h3>
+                    <p>Lengua ancestral de los Andes</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Efecto suave al hacer scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Animación al cargar
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+        });
+    </script>
+</body>
+</html>
